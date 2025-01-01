@@ -49,10 +49,12 @@ data = pd.DataFrame(all_data)
 print(data)
 
 # Save data to CSV
+employer = json_response.get('data', []).get('employer', []).get('shortName', [])
+
 folder_path = r'C:\Users\Admin\Desktop\Alvin\DE Bootcamp\API Testing\Glassdoor API\data'
 os.makedirs(folder_path, exist_ok=True)
-save_path = os.path.join(folder_path, 'reviews.csv')
+save_path = os.path.join(folder_path, f'{employer}_reviews.csv')
 
 data.to_csv(save_path, index=False)
 
-print(f"Data saved into {save_path}")
+print(f"{employer} reviews data saved into {save_path}")
