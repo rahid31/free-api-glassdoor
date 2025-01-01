@@ -10,7 +10,7 @@ url = os.getenv("baseUrl")
 
 params = {"companyId":"545277",
                "page":1
-               }
+			}
 
 headers = {
 	"x-rapidapi-key": os.getenv("RAPIDAPI_KEY"),
@@ -45,5 +45,14 @@ else:
 	print(f"Failed to fetch data: {response.status_code}")
 
 # Converting data to dataframe
-views = pd.DataFrame(all_data)
-print(views)
+data = pd.DataFrame(all_data)
+print(data)
+
+# Save data to CSV
+folder_path = r'C:\Users\Admin\Desktop\Alvin\DE Bootcamp\API Testing\Glassdoor API\data'
+os.makedirs(folder_path, exist_ok=True)
+save_path = os.path.join(folder_path, 'reviews.csv')
+
+data.to_csv(save_path, index=False)
+
+print(f"Data saved into {save_path}")
