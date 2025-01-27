@@ -24,5 +24,5 @@ This Python script utilizes an API to perform an ETL (Extract, Transform, Load) 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/glassdoor-api-etl.git
+   git clone https://github.com/rahid31/glassdoor-api-etl.git
    cd glassdoor-api-etl
