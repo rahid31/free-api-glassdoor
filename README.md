@@ -1,5 +1,3 @@
-# free-api-glassdoor
-
 # ETL Script: Fetch Employer Reviews and Save to CSV
 
 This Python script utilizes an API to perform an ETL (Extract, Transform, Load) process. It fetches employer reviews from the API, processes the data, and exports it to a CSV file for further analysis. 
@@ -16,7 +14,7 @@ This Python script utilizes an API to perform an ETL (Extract, Transform, Load) 
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.12+
 - A [RapidAPI](https://rapidapi.com/) account with access to the desired API.
 - `.env` file for storing sensitive credentials.
 
